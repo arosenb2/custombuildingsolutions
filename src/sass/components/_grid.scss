@@ -1,0 +1,26 @@
+.container > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    > div {
+        flex: 2;
+        min-height: 50px;
+        margin: 4px;
+
+        &.double {
+            flex: 3;
+            margin: 4px 5px;
+            @media(screen and max-width: $break-small) {
+                flex: none;
+                margin: 4px 0;
+            }
+        }
+
+        @media(screen and max-width: $break-small) {
+            flex: none;
+            width: 100%;
+            margin: 4px 0;
+        }
+    }
+}

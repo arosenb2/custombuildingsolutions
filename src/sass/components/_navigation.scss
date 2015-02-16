@@ -1,0 +1,26 @@
+nav {
+    @media(screen and max-width: $break-medium) {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 10px 0;
+    }
+
+    li {
+        flex: 1;
+        text-align: center;
+        padding: 5px 0;
+
+        border-bottom: 5px solid transparent;
+
+        transition: border .5s ease-out;
+
+        &:hover {
+            border-bottom-color: #fff;
+            transition: border .3s ease-in;
+        }
+    }    
+}

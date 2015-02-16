@@ -1,0 +1,15 @@
+footer {
+    padding: 10px;
+    margin: 10px 0 0;
+    text-align: center;
+    flex: 3;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: inherit;
+        font-weight: bold;
+    }
+}

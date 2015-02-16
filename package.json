@@ -1,0 +1,30 @@
+{
+  "name": "cbsinc",
+  "version": "1.0.0",
+  "description": "Theme for website",
+  "author": "Aaron Rosenbaum <aaron.rosenbaum@gmail.com>",
+  "private": true,
+  "devDependencies": {
+    "connect": "*",
+    "connect-livereload": "^0.4.0",
+    "del": "*",
+    "express": "^4.9.5",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-htmlmin": "*",
+    "gulp-imagemin": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-svg-sprites": "^1.0.3",
+    "gulp-uglify": "*",
+    "gulp-util": "^3.0.1",
+    "gulp-sourcemaps": "*",
+    "tiny-lr": "^0.1.4"
+  }
+}
