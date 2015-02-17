@@ -38,6 +38,8 @@ footer {
 
             @media(screen and max-width: $break-medium) {
                 font-size: 1.3em;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 

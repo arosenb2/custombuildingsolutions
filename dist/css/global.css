@@ -449,6 +449,8 @@ footer > section dd {
 @media (max-width: 768px) {
   footer > section dd {
     font-size: 1.3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 footer > section ul {
