@@ -297,8 +297,8 @@ nav .card {
 .card h2 {
   padding: 5px 7px;
   margin: -10px -10px 5px;
-  background: -webkit-linear-gradient(rgba(141, 166, 135, 0.5), rgba(169, 188, 164, 0.5), transparent);
-  background: linear-gradient(rgba(141, 166, 135, 0.5), rgba(169, 188, 164, 0.5), transparent);
+  background: -webkit-linear-gradient(rgba(141, 166, 135, 0.5), transparent);
+  background: linear-gradient(rgba(141, 166, 135, 0.5), transparent);
   text-shadow: 0 1px 1px #999;
   font-size: 1.2em;
 }
