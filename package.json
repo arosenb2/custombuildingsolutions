@@ -14,17 +14,17 @@
     "gulp-cache": "*",
     "gulp-concat": "*",
     "gulp-htmlmin": "*",
-    "gulp-imagemin": "*",
+    "gulp-image-optimization": "^0.1.3",
     "gulp-livereload": "*",
     "gulp-minify-css": "*",
     "gulp-notify": "*",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "*",
     "gulp-ruby-sass": "^0.7.1",
+    "gulp-sourcemaps": "*",
     "gulp-svg-sprites": "^1.0.3",
     "gulp-uglify": "*",
     "gulp-util": "^3.0.1",
-    "gulp-sourcemaps": "*",
     "tiny-lr": "^0.1.4"
   }
 }

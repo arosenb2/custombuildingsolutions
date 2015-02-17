@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
-    imagemin = require('gulp-imagemin'),
+    imageopt = require('gulp-image-optimization'),
     plumber = require('gulp-plumber'),
     svgSprite = require("gulp-svg-sprites"),
     rename = require('gulp-rename'),
@@ -77,7 +77,11 @@ gulp.task('svg', function () {
 });
 
 gulp.task('image', function() {
-  return gulp.src('src/images/*')
-    .pipe(imagemin({progressive: true}))
-    .pipe(gulp.dest('dist/images'));
+  return gulp.src(['src/img/**/*'])
+    .pipe(imageopt({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    }))
+    .pipe(gulp.dest('dist/img'));
 });
