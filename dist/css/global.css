@@ -484,6 +484,7 @@ footer > div p {
 @media (max-width: 768px) {
   footer > div p {
     text-align: center;
+    font-size: .75em;
   }
 }
 footer a {
