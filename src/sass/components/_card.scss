@@ -19,7 +19,7 @@
     h2 {
         padding: 5px 7px;
         margin: -10px -10px 5px;
-        background: linear-gradient(darken($green, 10%), $green, transparent);
+        background: linear-gradient(rgba(darken($green, 10%), .5), rgba($green, .5) , transparent);
         text-shadow: 0 1px 1px #999;
         font-size: 1.2em;
     }
@@ -33,6 +33,12 @@
     }
 
     a {
+        color: $blue;
+
+        &:visited {
+            color: lighten($blue, 10%);
+        }
+
         &.btn {
             padding: 15px 7px 10px;
             margin: 0 auto 10px;
@@ -50,6 +56,9 @@
             &:hover {
                 transition: border .2s ease-in;
                 border-bottom: 5px solid darken($green, 20%);
+            }
+            &:visited {
+                color: #fff;
             }
         }
 

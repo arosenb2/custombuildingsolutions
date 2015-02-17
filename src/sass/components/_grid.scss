@@ -11,16 +11,36 @@
         &.double {
             flex: 3;
             margin: 4px 5px;
-            @media(screen and max-width: $break-small) {
+            @media(screen and max-width: $break-medium) {
                 flex: none;
                 margin: 4px 0;
             }
         }
 
-        @media(screen and max-width: $break-small) {
+        @media(screen and max-width: $break-medium) {
             flex: none;
             width: 100%;
             margin: 4px 0;
+        }
+    }
+
+    footer {
+        @media(screen and max-width: $break-medium) {
+            margin: 5px -10px;
+        }
+        
+        section {
+            @media(screen and max-width: $break-medium) {
+                flex: none;
+                width: 100%;
+                text-align: center;
+                padding: 5px 0;
+                margin: 0 0 5px;
+
+                &:nth-child(3) {
+                    border-bottom: none;
+                }
+            }    
         }
     }
 }

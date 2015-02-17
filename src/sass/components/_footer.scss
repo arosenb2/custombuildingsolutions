@@ -1,11 +1,79 @@
 footer {
     padding: 10px;
     margin: 10px 0 0;
-    text-align: center;
+    font-size: .8em;
+    
+    display: flex;
+    flex-wrap: wrap;
     flex: 3;
 
-    p:last-child {
-        margin-bottom: 0;
+    > section {
+        flex: 1;
+        padding: 5px 15px;
+        h4 {
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0 0 5px;
+
+            @media(screen and max-width: $break-medium) {
+                background: rgba(0, 0, 0, .5);
+                padding: 10px 0;
+                margin: 0px -10px;
+                font-size: 1.3em;
+
+                &:nth-child(1) {
+                    margin-top: -15px;
+                }
+            }
+        }
+        dl.contact {
+            dd:nth-child(even) {
+                padding: 0 0 10px;
+            }
+        }
+        dd {
+            padding: 0;
+            margin: 0 0 5px !important;
+            line-height: 1em !important;
+
+            @media(screen and max-width: $break-medium) {
+                font-size: 1.3em;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        li {
+            padding: 0;
+            margin: 0 0 5px;
+
+            a {
+                font-size: 1em !important;
+                text-transform: none !important;
+                text-shadow: none !important;
+
+                @media(screen and max-width: $break-medium) {
+                    font-size: 1.3em !important;
+                }
+            }
+        }
+    }
+
+    > div {
+        width: 100%;
+        p {
+            text-transform: uppercase;
+            text-align: right;
+            font-size: .5em;
+            margin: 0 !important;
+
+            @media(screen and max-width: $break-medium) {
+                text-align: center;
+            }
+        }
     }
 
     a {

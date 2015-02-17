@@ -2,13 +2,13 @@
 @import "variables";
 @import "normalize";
 @import "bourbon/bourbon";
-	
+    
 /* Site Components */
 @import "components/grid";
-@import "components/header";
-@import "components/footer";
 @import "components/navigation";
 @import "components/card";
+@import "components/header";
+@import "components/footer";
 
 /* Site Defaults */
 @import "main";

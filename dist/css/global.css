@@ -209,7 +209,7 @@ td, th {
           flex: 3;
   margin: 4px 5px;
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .container > div > div.double {
     -webkit-box-flex: 0;
     -webkit-flex: none;
@@ -218,7 +218,7 @@ td, th {
     margin: 4px 0;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .container > div > div {
     -webkit-box-flex: 0;
     -webkit-flex: none;
@@ -228,26 +228,25 @@ td, th {
     margin: 4px 0;
   }
 }
-
-header h1 {
-  text-shadow: 0 1px 1px #fff;
+@media (max-width: 768px) {
+  .container > div footer {
+    margin: 5px -10px;
+  }
 }
-
-footer {
-  padding: 10px;
-  margin: 10px 0 0;
-  text-align: center;
-  -webkit-box-flex: 3;
-  -webkit-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-}
-footer p:last-child {
-  margin-bottom: 0;
-}
-footer a {
-  color: inherit;
-  font-weight: bold;
+@media (max-width: 768px) {
+  .container > div footer section {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 0 5px;
+  }
+  .container > div footer section:nth-child(3) {
+    border-bottom: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -298,8 +297,8 @@ nav .card {
 .card h2 {
   padding: 5px 7px;
   margin: -10px -10px 5px;
-  background: -webkit-linear-gradient(#8da687, #A9BCA4, transparent);
-  background: linear-gradient(#8da687, #A9BCA4, transparent);
+  background: -webkit-linear-gradient(rgba(141, 166, 135, 0.5), rgba(169, 188, 164, 0.5), transparent);
+  background: linear-gradient(rgba(141, 166, 135, 0.5), rgba(169, 188, 164, 0.5), transparent);
   text-shadow: 0 1px 1px #999;
   font-size: 1.2em;
 }
@@ -308,6 +307,12 @@ nav .card {
 }
 .card p {
   margin: 0 0 15px;
+}
+.card a {
+  color: #568EEE;
+}
+.card a:visited {
+  color: #84adf3;
 }
 .card a.btn {
   padding: 15px 7px 10px;
@@ -329,6 +334,9 @@ nav .card {
   -webkit-transition: border .2s ease-in;
           transition: border .2s ease-in;
   border-bottom: 5px solid #72906a;
+}
+.card a.btn:visited {
+  color: #fff;
 }
 .card a.primary {
   background: #568EEE;
@@ -385,6 +393,100 @@ nav .card {
   text-shadow: 0 1px 1px #aaa;
   font-size: 1.2em;
   text-transform: uppercase;
+}
+
+header h1 {
+  text-shadow: 0 1px 1px #fff;
+}
+
+footer {
+  padding: 10px;
+  margin: 10px 0 0;
+  font-size: .8em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+footer > section {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5px 15px;
+}
+footer > section h4 {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 5px;
+}
+@media (max-width: 768px) {
+  footer > section h4 {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    margin: 0px -10px;
+    font-size: 1.3em;
+  }
+  footer > section h4:nth-child(1) {
+    margin-top: -15px;
+  }
+}
+footer > section dl.contact dd:nth-child(even) {
+  padding: 0 0 10px;
+}
+footer > section dd {
+  padding: 0;
+  margin: 0 0 5px !important;
+  line-height: 1em !important;
+}
+@media (max-width: 768px) {
+  footer > section dd {
+    font-size: 1.3em;
+  }
+}
+footer > section ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+footer > section li {
+  padding: 0;
+  margin: 0 0 5px;
+}
+footer > section li a {
+  font-size: 1em !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+}
+@media (max-width: 768px) {
+  footer > section li a {
+    font-size: 1.3em !important;
+  }
+}
+footer > div {
+  width: 100%;
+}
+footer > div p {
+  text-transform: uppercase;
+  text-align: right;
+  font-size: .5em;
+  margin: 0 !important;
+}
+@media (max-width: 768px) {
+  footer > div p {
+    text-align: center;
+  }
+}
+footer a {
+  color: inherit;
+  font-weight: bold;
 }
 
 /* Site Defaults */
