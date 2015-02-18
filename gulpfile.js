@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     svgSprite = require("gulp-svg-sprites"),
     rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
+    mediaqueries = require('gulp-combine-media-queries'),
     del = require('del');
 
 var EXPRESS_PORT = 5000;
@@ -42,13 +43,13 @@ function notifyLiveReload(event) {
   });
 }
 
-gulp.task('default',['express', 'livereload'],function () {
+gulp.task('default',['css', 'image', 'svg', 'express', 'livereload'],function () {
   gulp.watch('src/sass/**/*.scss', ['css']);
-  gulp.watch('src/svg/*.svg', ['svg']);
-  gulp.watch('src/images/**/*', ['image']);
-  gulp.watch('*.html', notifyLiveReload);
-  gulp.watch('dist/css/*.css', notifyLiveReload);
-  gulp.watch('dist/images/*', notifyLiveReload);
+  gulp.watch('src/svg/**/*.svg', ['svg']);
+  gulp.watch('src/img/**/*', ['image']);
+  gulp.watch('**/*.html', notifyLiveReload);
+  gulp.watch('dist/css/**/*.css', notifyLiveReload);
+  gulp.watch('dist/img/**/*', notifyLiveReload);
 });
 
 gulp.task('express',function(){
@@ -65,6 +66,7 @@ gulp.task('css', function() {
     .pipe(sass({style: 'expanded'}))
     .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('dist/css'))
+    .pipe(mediaqueries({log: true}))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/css'));

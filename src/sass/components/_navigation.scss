@@ -19,8 +19,12 @@ nav {
         transition: border .5s ease-out;
 
         &:hover {
-            border-bottom-color: #fff;
+            border-bottom-color: #fff !important;
             transition: border .3s ease-in;
+        }
+
+        &.active {
+            border-bottom-color: #999;
         }
     }    
 }

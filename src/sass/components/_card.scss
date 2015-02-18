@@ -81,12 +81,18 @@
     }
 
     .polaroid {
+        background: #fff;
         border-top: 7px solid #fff;
         border-left: 7px solid #fff;
         border-right: 7px solid #fff;
-        border-bottom: 14px solid #fff;
+        border-bottom: 21px solid #fff;
         box-shadow: 0 5px 5px -1px #999;
         margin: 20px 0;
+
+        &.small {
+            max-width: 250px;
+            overflow: hidden;
+        }
     }
 
     blockquote {
@@ -119,6 +125,22 @@
                     content: " -";
                 }
             }
+        }
+    }
+
+    .inner-grid {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        > div {
+            flex: 1;
+            min-width: 300px;
+        }
+        h4 {
+            text-align: center;
+        }
+        .polaroid {
+            margin: 0 auto;
         }
     }
 
