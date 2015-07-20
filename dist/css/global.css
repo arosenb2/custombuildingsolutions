@@ -549,3 +549,15 @@ body {
     width: 90%;
   }
 }
+
+/* Page Specific */
+#recommendations p {
+  text-align: center;
+}
+#recommendations a {
+  text-decoration: none;
+  color: transparent;
+}
+#recommendations img {
+  height: 125px;
+}
